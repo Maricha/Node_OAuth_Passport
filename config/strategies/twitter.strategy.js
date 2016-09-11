@@ -18,6 +18,7 @@ module.exports = function(){
       user.twitter = {};
       user.twitter.id = profile.id;
       user.twitter.token = accessToken;
+      user.twitter.tokenSecret = tokenSecret;
       
       done(null, user);
   }));

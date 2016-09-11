@@ -6,3 +6,14 @@ body {
 a {
   color: #00B7FF;
 }
+
+.facebook {
+  background-color: red;
+  font-size: 30px;
+  
+}
+
+.googleplus {
+  background-color: blue;
+  font-size: 30px;
+}

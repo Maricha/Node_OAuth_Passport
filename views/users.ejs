@@ -4,7 +4,7 @@
   <title>Document</title>
   
   <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/lib/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="/stylesheets/style.css">
   
   <script src="/lib/jquery/dist/jquery.js"></script>
@@ -14,7 +14,17 @@
 <body>
   <div>
     <img src="<%= user.image %>" alt="sdfsdf">
-    <%= user.name %>
+    <%= user.displayName %>
+    <% if (user.facebook) {%>
+      <img src="<%=user.facebook.image %>" alt="ss">
+    <%}%>
+    I have <%=user.facebook.friends %> friends
+  </div>
+  <div>
+   <ul>
+     <li><a href="/auth/google" class="<%if(user.google){%>googleplus <%}%>"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+     <li><a href="/auth/facebook" class="<%if(user.facebook){%>facebook <%}%>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+   </ul>
   </div>
 </body>
 </html>
