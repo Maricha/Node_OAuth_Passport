@@ -14,4 +14,25 @@ router.route('/google')
            'https://www.googleapis.com/auth/userinfo.email']
 }));
 
+
+//router.route('/twitter/callback')
+//  .get(passport.authenticate('twitter', {
+//    successRedirect: '/users/',
+//    failure: '/error/'
+//}));
+//
+//router.route('/twitter')
+//  .get(passport.authenticate('twitter'));
+
+router.route('/facebook')
+  .get(passport.authenticate('facebook', {
+    scope: ['email']
+}));
+
+router.route('/facebook/callback')
+  .get(passport.authenticate('facebook', {
+    successRedirect: '/users',
+    failure: '/error/'
+}));
+
 module.exports = router

@@ -15,7 +15,9 @@
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
     "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
     "passport-google-oauth": "^1.0.0",
+    "passport-twitter": "^1.0.4",
     "serve-favicon": "~2.3.0"
   }
 }

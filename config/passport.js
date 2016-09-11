@@ -14,5 +14,7 @@ module.exports = function(app) {
   });
   
   require('./strategies/google.strategy')();
+  //require('./strategies/twitter.strategy')();
+  require('./strategies/facebook.strategy')();
   
 };
